@@ -8,4 +8,4 @@ const config = {
   pgPassword: process.env.PG_PASSWORD || 'postgres',
 };
 
-export default config;
+export { config };
