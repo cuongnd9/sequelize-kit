@@ -10,9 +10,9 @@ A simple 🎲 KIT to start a new Node project.
 - [Docker Compose](https://docs.docker.com/compose/) (*optional)
 - [Dockstation](https://dockstation.io/) (*optional)
 
-### How to use?
+## How to use?
 
-#### Update config.ts file (src/components/config.ts)
+### Update config.ts file (src/components/config.ts)
 
 ```typescript
 const config = {
