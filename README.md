@@ -28,7 +28,7 @@ const config = {
 export default config;
 ```
 
-#### Start application
+### Start application
 
 ```sh
 yarn
