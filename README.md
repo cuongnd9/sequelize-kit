@@ -2,7 +2,7 @@
 
 A simple 🎲 KIT to start a new Node project.
 
-## Prepare
+## Preparation
 
 - [Node](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/)
@@ -38,7 +38,9 @@ yarn start:dev
 ### Use with Docker + Docker Compose
 
 ```sh
-cd scripts && ./start.sh
+yarn docker-compose:start
+yarn docker-compose:stop
+yarn docker-compose:rebuild
 ```
 
 🙌 Awesome
