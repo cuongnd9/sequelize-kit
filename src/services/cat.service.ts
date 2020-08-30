@@ -1,4 +1,4 @@
-import sequelize from '../models';
+import { sequelize } from '../models/sequelize';
 import Cat from '../models/cat.model';
 import Category from '../models/category.model';
 import { CatCreationInput } from '../types/cat.type';
