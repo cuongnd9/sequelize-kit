@@ -19,19 +19,20 @@ const sequelize = new Sequelize({
   },
 });
 
-sequelize
-  .authenticate()
-  .catch((e) => {
-    logger.error('Sequelize authentication failed: ', e);
-  });
+const initSequelize = () => {
+  sequelize
+    .authenticate()
+    .catch((e) => {
+      logger.error('Sequelize authentication failed: ', e);
+    });
 
-const associate = () => {
   const models: { [key: string]: any } = {};
   fs
     .readdirSync(__dirname)
     .filter((fileName: string) => /model.[t|j]s/.test(fileName))
     .forEach((fileName) => {
       const model = require(path.resolve(__dirname, fileName));
+      model.initModel();
       models[model.default.name] = model.default;
     });
   Object.keys(models).forEach((modelName: string) => {
@@ -41,4 +42,4 @@ const associate = () => {
   });
 };
 
-export { sequelize, associate };
+export { sequelize, initSequelize };

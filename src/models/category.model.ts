@@ -22,18 +22,21 @@ class Category extends Model {
   }
 }
 
-Category.init({
-  id: {
-    type: DataTypes.UUID,
-    primaryKey: true,
-    defaultValue: DataTypes.UUIDV4,
-  },
-  name: {
-    type: DataTypes.STRING,
-  },
-}, {
-  sequelize,
-  modelName: 'categories',
-});
+const initModel = () => {
+  Category.init({
+    id: {
+      type: DataTypes.UUID,
+      primaryKey: true,
+      defaultValue: DataTypes.UUIDV4,
+    },
+    name: {
+      type: DataTypes.STRING,
+    },
+  }, {
+    sequelize,
+    modelName: 'categories',
+  });
+};
 
+export { initModel };
 export default Category;
