@@ -30,6 +30,7 @@ const migration = {
   }, {
     transaction: t,
   })),
+  down: (queryInterface: QueryInterface) => queryInterface.sequelize.transaction((t) => queryInterface.dropTable('cats', { transaction: t })),
 };
 
 export default migration;

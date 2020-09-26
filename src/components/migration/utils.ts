@@ -1,7 +1,7 @@
 import Umzug from 'umzug';
 import { Sequelize } from 'sequelize';
 
-export const migrateDB = (sequelize: Sequelize, path: string) => new Umzug({
+const migrate = (sequelize: Sequelize, path: string) => new Umzug({
   migrations: {
     path,
     pattern: /\.migration.[t|j]s$/,
@@ -15,5 +15,9 @@ export const migrateDB = (sequelize: Sequelize, path: string) => new Umzug({
     ],
   },
   storage: 'sequelize',
-  storageOptions: { sequelize },
-}).up();
+  storageOptions: {
+    sequelize,
+  },
+});
+
+export { migrate };

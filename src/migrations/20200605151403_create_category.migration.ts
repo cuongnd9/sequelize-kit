@@ -19,6 +19,7 @@ const migration = {
   }, {
     transaction: t,
   })),
+  down: (queryInterface: QueryInterface) => queryInterface.sequelize.transaction((t) => queryInterface.dropTable('categories', { transaction: t })),
 };
 
 export default migration;

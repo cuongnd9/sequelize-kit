@@ -32,4 +32,4 @@ RUN yarn install --frozen-lockfile --production
 RUN mkdir build
 COPY --from=builder /home/node/app/build ./build
 
-CMD [ "node", "./build/index.js" ]
+CMD [ "yarn", "start" ]
