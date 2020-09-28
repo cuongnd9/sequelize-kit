@@ -1,6 +1,5 @@
-import { Model, DataTypes } from 'sequelize';
+import { Model, DataTypes, Sequelize } from 'sequelize';
 
-import { sequelize } from './sequelize';
 import Cat from './cat.model';
 
 class Category extends Model {
@@ -22,7 +21,7 @@ class Category extends Model {
   }
 }
 
-const initModel = () => {
+const initModel = (sequelize: Sequelize) => {
   Category.init({
     id: {
       type: DataTypes.UUID,

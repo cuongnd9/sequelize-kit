@@ -29,7 +29,7 @@ const initSequelize = () => {
     .filter((fileName: string) => /model.[t|j]s/.test(fileName))
     .forEach((fileName) => {
       const model = require(path.resolve(__dirname, fileName));
-      model.initModel();
+      model.initModel(sequelize);
       models[model.default.name] = model.default;
     });
   Object.keys(models).forEach((modelName: string) => {
