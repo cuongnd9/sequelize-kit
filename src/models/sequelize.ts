@@ -34,7 +34,7 @@ const initSequelize = () => {
     });
   Object.keys(models).forEach((modelName: string) => {
     if ('associate' in models[modelName]) {
-      models[modelName].associate(models);
+      models[modelName].associate();
     }
   });
 };
