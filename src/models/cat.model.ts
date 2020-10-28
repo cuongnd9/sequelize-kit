@@ -14,6 +14,8 @@ class Cat extends Model {
   public createdAt: Date;
 
   public updatedAt: Date;
+  
+  public deletedAt: Date;
 
   public category?: Category;
 
