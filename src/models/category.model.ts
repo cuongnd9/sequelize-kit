@@ -10,6 +10,8 @@ class Category extends Model {
   public createdAt: Date;
 
   public updatedAt: Date;
+  
+  public deletedAt: Date;
 
   public cats?: Cat[];
 
