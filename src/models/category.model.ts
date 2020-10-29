@@ -10,7 +10,7 @@ class Category extends Model {
   public createdAt: Date;
 
   public updatedAt: Date;
-  
+
   public deletedAt: Date;
 
   public cats?: Cat[];
@@ -37,7 +37,7 @@ const initModel = (sequelize: Sequelize) => {
     sequelize,
     underscored: true,
     paranoid: true,
-    tableName: 'categories',
+    tableName: 'category',
   });
 };
 

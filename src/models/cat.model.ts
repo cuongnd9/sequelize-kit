@@ -14,7 +14,7 @@ class Cat extends Model {
   public createdAt: Date;
 
   public updatedAt: Date;
-  
+
   public deletedAt: Date;
 
   public category?: Category;
@@ -44,7 +44,7 @@ const initModel = (sequelize: Sequelize) => {
     categoryId: {
       type: DataTypes.UUID,
       references: {
-        model: 'categories',
+        model: 'category',
         key: 'id',
       },
     },
@@ -52,7 +52,7 @@ const initModel = (sequelize: Sequelize) => {
     sequelize,
     underscored: true,
     paranoid: true,
-    tableName: 'cats',
+    tableName: 'cat',
   });
 };
 
